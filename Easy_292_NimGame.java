@@ -7,9 +7,24 @@ Write a function to determine whether you can win the game given the number of s
 For example, if there are 4 stones in the heap, 
 then you will never win the game: no matter 1, 2, or 3 stones you remove, the last stone will always be removed by your friend. 
 ***/
+/***
+1 win
+2 win
+3 win
+4 lose
+5 win
+6 win
+7 win
+8 lose
+......
+***/
 
 public class Solution {
     public boolean canWinNim(int n) {
-        
+        if (n > 0 && n % 4 != 0) 
+			return true;
+		if (n <= 0)
+			System.out.println("Invalid number of stones.");
+		return false;
     }
 }
